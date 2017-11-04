@@ -15,14 +15,14 @@
     var layer_1;
     function initialize() {
       map = new google.maps.Map(document.getElementById('map-canvas'), {
-        center: new google.maps.LatLng(49.31835006937047, 32.313735595703086),
-        zoom: 7,
+        center: new google.maps.LatLng(51.40985822892921, 26.408584228515565),
+        zoom: 8,
         mapTypeId: google.maps.MapTypeId.ROADMAP
       });
       layer_0 = new google.maps.FusionTablesLayer({
         query: {
           select: "col0",
-          from: "1nAErPHMebU38NdP2_C5zaarv5qGpwD8AKqYXWXLr"
+          from: "1w1JgT4ABNEY6rYt1IUorT3DcxxY1pF3_5Lw9wh9a"
         },
         map: map,
         styleId: 2,
@@ -70,7 +70,7 @@
       var whereClause;
       var searchString = document.getElementById('search-string_3').value.replace(/'/g, "\\'");
       if (searchString != '--Select--') {
-        whereClause = "'зруйнована (так/ні)' = '" + searchString + "'";
+        whereClause = "'школа' = '" + searchString + "'";
       }
       layer_1.setOptions({
         query: {
@@ -84,7 +84,7 @@
       var whereClause;
       var searchString = document.getElementById('search-string_4').value.replace(/'/g, "\\'");
       if (searchString != '--Select--') {
-        whereClause = "'школа' = '" + searchString + "'";
+        whereClause = "'зруйнована (так/ні)' = '" + searchString + "'";
       }
       layer_1.setOptions({
         query: {
@@ -114,7 +114,7 @@
     </div>
     <div style="margin-top: 10px;">
       <label class="layer-wizard-search-label">
-        століття будівництва
+        століття побудови
         <select id="search-string_2" onchange="changeMap_2(this.value);">
           <option value="--Select--">--Select--</option>
           <option value="">(no value)</option>
@@ -129,24 +129,24 @@
     </div>
     <div style="margin-top: 10px;">
       <label class="layer-wizard-search-label">
-        зруйнування споруди
-        <select id="search-string_3" onchange="changeMap_3(this.value);">
-          <option value="--Select--">--Select--</option>
-          <option value="">(no value)</option>
-          <option value="так">так</option>
-        </select>
-      </label> 
-    </div>
-    <div style="margin-top: 10px;">
-      <label class="layer-wizard-search-label">
         школа будівництва
-        <select id="search-string_4" onchange="changeMap_4(this.value);">
+        <select id="search-string_3" onchange="changeMap_3(this.value);">
           <option value="--Select--">--Select--</option>
           <option value="">(no value)</option>
           <option value="берестейська">берестейська</option>
           <option value="волинська">волинська</option>
           <option value="поліська">поліська</option>
           <option value="поліська (архаїчна група)">поліська (архаїчна група)</option>
+        </select>
+      </label> 
+    </div>
+    <div style="margin-top: 10px;">
+      <label class="layer-wizard-search-label">
+        зруйнування споруди
+        <select id="search-string_4" onchange="changeMap_4(this.value);">
+          <option value="--Select--">--Select--</option>
+          <option value="">(no value)</option>
+          <option value="так">так</option>
         </select>
       </label> 
     </div>
