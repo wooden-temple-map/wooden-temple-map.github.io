@@ -1,1 +1,0 @@
-# wooden-temple-map.github.io
